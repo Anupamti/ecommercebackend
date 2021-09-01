@@ -1,13 +1,15 @@
 import mongoose from "mongoose";
 
-const UserdataSchema = mongoose.Schema({
-    username: { type: String, required: true },
-    mobile: { type: String, required: true },
-    email: { type: String, required: true },
-    address: { type: String },
-    parentId: { type: String, required: true },
-    id: { type: String }
+const UserdataMovie = mongoose.Schema({
+    productTitle: { type: String, required: true },
+    description: { type: String, required: true },
+    // language: { type: String, required: true },
+    description: { type: String, required: true },
+    image: { type: String, required: true },
+    seoTitle: { type: String, required: true },
+    seoDesc: { type: String, required: true },
+
 })
 
-const UsersData = mongoose.model('UsersData', UserdataSchema);
-export default UsersData
+const UsersMovie = mongoose.model('UsersMovie', UserdataMovie);
+export default UsersMovie

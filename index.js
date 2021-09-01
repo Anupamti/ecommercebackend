@@ -14,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/user', userRoutes);
 app.use('/userData', userDeatailsRoutes);
+app.use('/uploads', express.static('uploads'))
 
 app.get('/', (req, res) => {
     res.send('Hello to projectServer API');
